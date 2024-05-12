@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# This script displays one thru twenty but for four, nine, and seventeen it displays text
+i=1
+
+while [ $i -le 20 ];
+do
+	case $i in
+		4)
+			printf "$i\n"
+			echo "bad luck from China"
+			;;
+		9)
+			printf "$i\n"
+			echo "bad luck from Japan"
+			;;
+		17)
+			printf "$i\n"
+			echo "bad luck from Italy"
+			;;
+		*)
+			echo "$i"
+			;;
+	esac
+	i=$(( i + 1 ));
+done
