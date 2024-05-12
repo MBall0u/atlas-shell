@@ -11,7 +11,7 @@ do
 		echo "$m"
 	else
 		h=$(( h + 1 ))
-		m=0
+		m=-1
 	fi
 m=$(( m + 1 ));
 done
