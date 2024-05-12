@@ -6,15 +6,15 @@ while [ $i -le 20 ];
 do
 	case $i in
 		4)
-			printf "$i\n"
+			printf "%s\n" "$i"
 			echo "bad luck from China"
 			;;
 		9)
-			printf "$i\n"
+			printf "%s\n" "$i"
 			echo "bad luck from Japan"
 			;;
 		17)
-			printf "$i\n"
+			printf "%s\n" "$i"
 			echo "bad luck from Italy"
 			;;
 		*)
