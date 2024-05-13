@@ -2,5 +2,8 @@
 # This script will display a list of the content in the current directory but only the part of the name after the - will be displayed
 
 for i in *; do
-	echo "${i#-}"
+	if [ -f "$i" ]; then
+		text="${i#-}"
+		echo "$text"
+	fi
 done
