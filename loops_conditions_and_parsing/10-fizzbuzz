@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 # This script does FizzBuzz
+i="1"
 
-for i in {1..100}
-	case $i in
-		$(($i%3)) == 0)
-			echo "Fizz"
-		$(($i%5)) == 0)
-			echo "Buzz"
-		$(($i%3)) -a $(($i%5)) == 0)
-			echo "FizzBuzz"
-		*)
-			echo "$i"
-	esac
+while [ $i -le 100 ];
+do
+        if [ $((i%3)) == 0 ] && [ $((i%5)) == 0 ]; then
+                echo "FizzBuzz"
+        elif [ $((i%5)) == 0 ]; then
+                echo "Buzz"
+        elif [ $((i%3)) == 0 ]; then
+                echo "Fizz"
+        else
+                echo "$i"
+        fi
+i=$(( i + 1 ))
 done
-		
