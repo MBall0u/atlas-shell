@@ -3,7 +3,7 @@
 
 for i in *; do
 	if [ -f "$i" ]; then
-		text="${i#-}"
+		text="${i#[^-]*-}"
 		echo "$text"
 	fi
 done
