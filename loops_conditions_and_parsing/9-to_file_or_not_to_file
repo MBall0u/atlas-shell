@@ -2,13 +2,13 @@
 # this script will the file through a list of checks(does the file exist/not exist, is the file empty/not empty, is the file a regular file/not a regular file) and displays text when necessary
 file="school"
 
-if [ -e $file ]; then
+if [ -e "$file" ]; then
 	echo "school file exists"
-	if [ -s $file ]; then
+	if [ -s "$file" ]; then
 		echo "school file is not empty"
-	elif [ ! -s $file ]; then
+	elif [ ! -s "$file" ]; then
 		echo "school file is empty"
-	elif [ -f $file ]; then
+	elif [ -f "$file" ]; then
 		echo "school is a regular file"
 	fi
 else
