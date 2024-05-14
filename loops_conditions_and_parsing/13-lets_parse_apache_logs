@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script is the first one using awk, wish me luck
+
+awk '{print $1, $9}' "apache-access.log"
