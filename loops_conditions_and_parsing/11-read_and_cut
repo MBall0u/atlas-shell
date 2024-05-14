@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script will pull from a file and only display the username, user id, and the home directory path for the user
 
-while [ IFS= read -r i; do
+while [ IFS= read -r i ]; do
 	u=$( echo $i | cut -d: -f1 )
 	d=$( echo $i | cut -d: -f3 )
 	p=$( echo $i | cut -d: -f6 )
