@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is going to tell a story with IFS and /etc/passwd
 
-while [ IFS= read -r i ]; do
+while IFS= read -r i; do
 	f1=$( echo "$i" | cut -d: -f1 )
 	f2=$( echo "$i" | cut -d: -f2 )
 	f3=$( echo "$i" | cut -d: -f3 )
