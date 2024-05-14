@@ -2,6 +2,9 @@
 # This script will pull from a file and only display the username, user id, and the home directory path for the user
 
 while [ IFS= read -r i; do
-	string=$( echo $i | cut -d: -f1,3,6 )
-	echo "$string"
+	u=$( echo $i | cut -d: -f1 )
+	d=$( echo $i | cut -d: -f3 )
+	p=$( echo $i | cut -d: -f6 )
+
+	echo "$ur:$d:$p"
 done
